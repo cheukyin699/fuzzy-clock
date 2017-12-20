@@ -2,15 +2,15 @@
 
 A clock that displays time in plain English.
 
-# Features
+## Features
 
 Prints the time in plain English. Nothing else.
 
-# Usage
+## Usage
 
 Can be used as a script in i3blocks.
 
-# Screenshots
+## Screenshots
 
 ![twenty six to three][s1]
 
