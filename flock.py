@@ -13,7 +13,7 @@ TEES = ['twenty', 'thirty', 'fourty', 'fifty']
 
 def to_hours(hrs):
     if hrs % 12 == 0:
-        return ['midnight', 'noon'][hrs % 12 - 1]
+        return ['noon', 'midnight'][hrs // 12 - 1]
     else:
         return HOURS[hrs % 12 - 1]
 
