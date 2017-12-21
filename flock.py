@@ -6,7 +6,9 @@ h = n.hour
 m = n.minute
 
 HOURS = ['one', 'two', 'three', 'four', 'five', 'six', 'seven',
-         'eight', 'nine', 'ten', 'eleven', 'twelve']
+         'eight', 'nine', 'ten', 'eleven', 'twelve', 'thirteen',
+         'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen',
+         'nineteen']
 
 TEES = ['twenty', 'thirty', 'fourty', 'fifty']
 
@@ -19,12 +21,10 @@ def to_hours(hrs):
 
 
 def to_minutes(mns):
-    if mns <= len(HOURS):
-        return HOURS[mns - 1]
-    elif mns % 15 == 0:
+    if mns % 15 == 0:
         return ['quarter', 'half', 'quarter'][mns // 15 - 1]
-    elif mns < 20:
-        return (HOURS[mns - 11] + "teen").replace('tt', 't')
+    elif mns <= len(HOURS):
+        return HOURS[mns - 1]
     elif mns % 10 == 0:
         return TEES[mns // 10 - 2]
     else:
